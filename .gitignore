@@ -1,0 +1,12 @@
+# Emacs
+*~
+[#]*[#]
+
+# Angular
+/node_modules
+/bower_components
+app/styles/*.css
+*.css.map
+
+# SASS
+.sass-cache/

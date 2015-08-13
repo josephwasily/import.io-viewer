@@ -1,0 +1,13 @@
+{
+  "name": "import.io-viewer",
+  "description": "A viewer for import.io API results",
+  "version": "0.0.0",
+  "homepage": "https://github.com/no-cheating/import.io-viewer",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.4.0",
+    "angular-route": "~1.4.0",
+    "angular-mocks": "~1.4.0"
+  }
+}
