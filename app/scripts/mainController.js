@@ -5,7 +5,9 @@
     var module = angular.module("importIOViewerApp");
 
 
-    module.controller("mainController",
-        function() {
-        });
+    /* Main controller for application. Attach data from API to scope. */
+    module.controller("mainController", ["$scope", "data",
+        function($scope, data) {
+            $scope.data = data;
+        }]);
 })();

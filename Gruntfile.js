@@ -7,6 +7,7 @@ module.exports = function(grunt) {
         STYLES_SRC:  "app/styles/src/",
         STYLES_DEST: "app/styles/",
         SCRIPTS_DIR: "app/scripts/",
+        TESTS_DIR:   "tests/",
 
         /* Compile SASS stylesheets */
         sass: {
@@ -50,13 +51,26 @@ module.exports = function(grunt) {
                     angular: false
                 }
             },
-            /* Most files are checked using default strict rules */
-            strict: {
-                src: ["<%= SCRIPTS_DIR %>**/*.js"]
+            /* App scripts are checked using default strict rules */
+            appScripts: {
+                src: [ "<%= SCRIPTS_DIR %>**/*.js" ]
             },
-            /* Some files like Gruntfile need to be checked using much more
-               lenient rules */
-            lenient: {
+            /* Test files need to have some more global values defined */
+            test: {
+                options: {
+                    globals: {
+                        describe:   false,
+                        beforeEach: false,
+                        it:         false,
+                        expect:     false,
+                        inject:     false,
+                        module:     false
+                    }
+                },
+                src: [ "<%= TESTS_DIR %>**/*.js" ]
+            },
+            /* Gruntfile needs to be checked using more lenient rules */
+            gruntfile: {
                 options: {
                     strict: false,
                     globals: {
@@ -78,7 +92,10 @@ module.exports = function(grunt) {
                 tasks: ["copy"]
             },
             js: {
-                files: ["<%= SCRIPTS_DIR %>**/*.js"],
+                files: [
+                    "<%= SCRIPTS_DIR %>**/*.js",
+                    "<%= TESTS_DIR %>**/*.js"
+                ],
                 tasks: ["jshint"]
             }
         }
