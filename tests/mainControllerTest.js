@@ -4,7 +4,10 @@
 
     describe("mainController", function() {
         /* dataGrabber service response data is mocked with this */
-        var DATA = { test: "test" };
+        var DATA = {
+            outputProperties: [ { name: "one", type: "STRING" } ],
+            results:          [ { one: "one value" } ]
+        };
 
         var scope;
         var mainController;
@@ -25,7 +28,8 @@
 
         it("should assign proper values to the scope",
            inject(function() {
-               expect(scope.data).toEqual(DATA);
+               expect(scope.headers).toEqual(DATA.outputProperties);
+               expect(scope.entries).toEqual(DATA.results);
         }));
     });
 })();

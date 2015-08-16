@@ -1,3 +1,27 @@
-/*# sourceMappingURL=main.scss.map */
+html {
+    font-family: "Open Sans";
+    font-size:   62.5%;   /* 10px */
+}
 
-/*# sourceMappingURL=main.scss.map */
+body {
+    font-size: 1.3rem;
+    padding: 20px;
+}
+
+.data-table {
+
+    border-collapse: collapse;
+
+    td,
+    th {
+        border: 1px solid black;
+        padding: 5px;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    th {
+        font-weight: 700;
+    }
+
+}

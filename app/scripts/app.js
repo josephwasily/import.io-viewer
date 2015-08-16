@@ -8,10 +8,11 @@
     ]);
 
     
+    /* Configure routes */
     module.config(["$routeProvider", function($routeProvider) {
         $routeProvider
             .when("/", {
-                controller: "mainController",
+                controller:  "mainController",
                 templateUrl: "templates/data-table.html",
                 resolve: {
                     /* Data must be downloaded before the controller is run */

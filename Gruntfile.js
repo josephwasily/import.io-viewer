@@ -84,7 +84,7 @@ module.exports = function(grunt) {
         /* Watch over stylesheets and scripts */
         watch: {
             scss: {
-                files: ["<%= STYLES_SRC %>"],
+                files: ["<%= STYLES_SRC %>**/*.scss"],
                 tasks: ["sass"]
             },
             css: {

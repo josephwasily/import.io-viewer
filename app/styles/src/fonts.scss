@@ -1,0 +1,25 @@
+@mixin font-face($src, $family, $weight: 400, $style: normal) {
+    @font-face {
+        font: {
+            family: $family;
+            weight: $weight;
+            style:  $style;
+        }
+        src: $src;
+    }
+}
+
+
+/* Open Sans */
+
+$open-sans-family: "Open Sans";
+$open-sans-dir:    "../fonts/open-sans/";
+
+@include font-face($open-sans-dir + "OpenSans-Regular.ttf",
+                   $open-sans-family, 400, normal);
+
+@include font-face($open-sans-dir + "OpenSans-Bold.ttf",
+                   $open-sans-family, 700, normal); 
+
+@include font-face($open-sans-dir + "OpenSans-Italic.ttf",
+                   $open-sans-family, 400, italic);

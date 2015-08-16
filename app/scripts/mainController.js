@@ -8,6 +8,7 @@
     /* Main controller for application. Attach data from API to scope. */
     module.controller("mainController", ["$scope", "data",
         function($scope, data) {
-            $scope.data = data;
+            $scope.headers = data.outputProperties;
+            $scope.entries = data.results;
         }]);
 })();

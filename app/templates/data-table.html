@@ -1,0 +1,18 @@
+<table class="data-table">
+  <!-- Headers -->
+  <thead>
+    <tr>
+      <th ng-repeat="header in headers" class="{{ header.type | lowercase }}">
+        {{ header.name | tableHeaderName }}
+      </th>
+    </tr>
+  </thead>
+
+  <!-- Data rows -->
+  <tbody>
+    <tr ng-repeat="entry in entries">
+      <td ng-repeat="header in headers" table-property entry="entry"
+          name="header.name" type="header.type | propertyType"></td>
+    </tr>
+  </tbody>
+</table>
