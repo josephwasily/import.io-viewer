@@ -1,0 +1,24 @@
+<div class="pagination">
+  <div class="page-list-section section">
+    <span class="label">Pages:</span>
+    <ul class="page-list">
+      <li ng-repeat="pageNumber in [] | pageRange : entriesTotal : entriesPerPage"
+          ng-click="$parent.currentPage = pageNumber"
+          ng-class="{ 'page-number': true, 'current': (pageNumber === currentPage) }">
+        {{ pageNumber }}
+      </li>
+    </ul>
+  </div>
+
+  <div class="per-page-section section">
+    <span class="label">Per page:</span>
+    <select ng-model="entriesPerPage" class="per-page-select">
+      <option value="5">5</option>
+      <option value="10">10</option>
+      <option value="25">25</option>
+      <option value="50">50</option>
+      <option value="100">100</option>
+      <option value="200">200</option>
+    </select>
+  </div>
+</div>

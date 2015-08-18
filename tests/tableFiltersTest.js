@@ -37,6 +37,7 @@
         it("should not change strings without any underscores", function() {
             expect(tableHeaderName("R.E.M.")).toEqual("R.E.M.");
         });
+
     });
 
 
@@ -90,6 +91,7 @@
             expect(propertyTypeFunc("")).toThrowError();
             expect(propertyTypeFunc(" ")).toThrowError();
         });
+
     });
 
 })();

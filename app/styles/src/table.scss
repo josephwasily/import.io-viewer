@@ -1,0 +1,29 @@
+/* Table with data from import.io API */
+.data-table {
+
+    border-collapse: collapse;
+
+    /* Highlight hovered table row */
+    tr:hover td {
+        background-color: #f1f1f1;
+    }
+
+    td,
+    th {
+        border: 1px solid black;
+        padding: 5px;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    th {
+        color:            #0d0d0d;
+        background-color: #d0d0d0;
+        font-weight: 700;
+    }
+
+    td {
+        background-color: #ffffff;
+    }
+
+}

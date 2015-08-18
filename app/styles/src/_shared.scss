@@ -1,0 +1,13 @@
+/* Placeholder class for elements that act like anchors, though may not be
+   actual <a> anchors. */
+%anchor {
+
+    color: #273096;
+    text-decoration: underline;
+
+    &:hover {
+        cursor: pointer;
+        color: #9b1789;
+    }
+
+}

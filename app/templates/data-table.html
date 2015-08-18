@@ -1,3 +1,9 @@
+<pagination-controls current-page="currentPage" entries-total="entriesTotal"
+                     entries-per-page="entriesPerPage"
+                     pagination-functions="paginationFunctions">
+</pagination-controls>
+
+
 <table class="data-table">
   <!-- Headers -->
   <thead>
@@ -10,7 +16,8 @@
 
   <!-- Data rows -->
   <tbody>
-    <tr ng-repeat="entry in entries">
+    <tr ng-repeat="entry in entries"
+        ng-if="$index | isOnDisplayedPage : currentPage : entriesPerPage">
       <td ng-repeat="header in headers" table-property entry="entry"
           name="header.name" type="header.type | propertyType"></td>
     </tr>

@@ -1,0 +1,55 @@
+@import "shared";
+
+
+/* Container of all pagination elements */
+.pagination {
+
+   margin: 0 0 20px 0;
+   font-size: 1.6rem;
+
+   .section {
+
+       display: inline;
+       
+       &.page-list-section {
+           margin: 0 35px 0 0;
+       }
+
+   }
+
+   .label {
+       margin: 0 6px 0 0;
+   }
+
+   /* List of page numbers */
+   .page-list {
+
+       display: inline;
+       
+       .page-number {
+
+           display: inline;
+
+           /* Display all the pages but current as anchors */
+           &:not(.current) {
+               @extend %anchor;
+           }
+
+           &.current {
+               font-weight: 700;
+           }
+
+           &.start-last,
+           &.end-first {
+               font-size: 2.5rem;
+           }
+
+           & + .page-number {
+               margin-left: 10px;
+           }
+
+       }
+
+   }
+
+}

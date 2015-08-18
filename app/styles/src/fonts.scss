@@ -1,3 +1,6 @@
+/* All modern versions of Firefox, Chrome, IE and Safari support .ttf fonts, so
+   I use this simplified syntax of @font-facee and don't care about support for
+   legacy browsers. */
 @mixin font-face($src, $family, $weight: 400, $style: normal) {
     @font-face {
         font: {
@@ -5,12 +8,12 @@
             weight: $weight;
             style:  $style;
         }
-        src: $src;
+        src: url($src);
     }
 }
 
 
-/* Open Sans */
+/*** Open Sans ***/
 
 $open-sans-family: "Open Sans";
 $open-sans-dir:    "../fonts/open-sans/";

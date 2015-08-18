@@ -64,7 +64,8 @@ module.exports = function(grunt) {
                         it:         false,
                         expect:     false,
                         inject:     false,
-                        module:     false
+                        module:     false,
+                        jasmine:    false
                     }
                 },
                 src: [ "<%= TESTS_DIR %>**/*.js" ]
